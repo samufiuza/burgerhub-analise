@@ -1,9 +1,9 @@
 """
 =============================================================
-  BurgerHub — Solução Completa de Análise de Dados - Teste Samuel Fiuza
+  BurgerHub — Solução Completa de Análise de Dados - Data Analyst Samuel Fiuza
   Franquia fictícia de fast food | 5 unidades | 12 meses
 =============================================================
-  Missões cobertas:
+  Missões cobertas conforme descrito no READMe:
     M1 — Diagnóstico geral de vendas
     M2 — Margem por produto + análise ABC
     M3 — ROI de marketing por canal
@@ -29,7 +29,7 @@ OUT_DIR.mkdir(exist_ok=True)
 
 
 # ──────────────────────────────────────────────
-#  1. GERAÇÃO DOS DADOS FICTÍCIOS
+#  1.  DADOS FICTÍCIOS
 # ──────────────────────────────────────────────
 
 def gerar_dados(conn: sqlite3.Connection):
@@ -164,7 +164,7 @@ def gerar_dados(conn: sqlite3.Connection):
 
 
 # ──────────────────────────────────────────────
-#  2. CONSULTAS SQL (QUERIES)
+#  2. AQUI AS CONSULTAS SQL (QUERIES)
 # ──────────────────────────────────────────────
 
 SQL_M1_MENSAL = """
@@ -408,7 +408,7 @@ def m6_relatorio_excel(conn, mensal, ranking, df_abc, df_roi, df_metas, df_canal
     path = OUT_DIR / "BurgerHub_Relatorio_2024.xlsx"
     with pd.ExcelWriter(path, engine="openpyxl") as writer:
 
-        # ── Aba 1: Visão geral mensal
+        # ── Aba 1: Visão mensal geral
         mensal_out = mensal.copy()
         mensal_out["var_pct"] = mensal_out["var_pct"].round(1)
         mensal_out.to_excel(writer, sheet_name="Vendas Mensais", index=False)
@@ -461,7 +461,7 @@ def m6_relatorio_excel(conn, mensal, ranking, df_abc, df_roi, df_metas, df_canal
 # ──────────────────────────────────────────────
 
 def main():
-    print("🍔  BurgerHub — Análise de Dados | Iniciando...\n")
+    print(" BurgerHub — Análise de Dados | Iniciando...\n")
 
     conn = sqlite3.connect(DB_PATH)
 

@@ -1,6 +1,6 @@
 # 🍔 BurgerHub — Análise de Dados de Franquia
 
-Projeto de análise de dados fictícios de uma rede de fast food com 5 unidades, cobrindo vendas, marketing e metas ao longo de 12 meses (2024).
+Esse é um projeto de análise de dados fictícios de uma rede de fast food com 5 unidades, cobrindo vendas, marketing e metas ao longo de 12 meses (2024).
 
 ---
 
@@ -17,9 +17,9 @@ Simula o trabalho de um analista de dados contratado pela franquia **BurgerHub**
 ```
 burgerhub/
 ├── burgerhub.py          # Script principal (geração de dados + análise)
-├── burgerhub_queries.sql # Todas as queries SQL separadas por missão
+├── burgerhub_queries.sql # Todas as queries SQL separadas por missão de análise
 ├── output/
-│   └── BurgerHub_Relatorio_2024.xlsx  # Gerado automaticamente
+│   └── BurgerHub_Relatorio_2024.xlsx  # Aqui é Gerado automaticamente
 └── README.md
 ```
 
@@ -64,12 +64,12 @@ python burgerhub.py
 
 O script irá:
 1. Criar o banco SQLite (`burgerhub.db`) com ~33.000 registros fictícios
-2. Executar todas as 6 missões de análise no terminal
+2. Executar todas as 6 missões que listamos acima, de análise no terminal
 3. Gerar o relatório `output/BurgerHub_Relatorio_2024.xlsx` com 7 abas
 
 ---
 
-## Resultados esperados
+## Listados os Resultados esperados
 
 Ao rodar o script, você verá no terminal:
 
@@ -82,7 +82,7 @@ Ao rodar o script, você verá no terminal:
 
 ---
 
-## Queries SQL
+## Aqui as Queries SQL
 
 O arquivo `burgerhub_queries.sql` contém todas as queries organizadas por missão, compatíveis com **SQLite**. Você pode rodá-las em qualquer client SQL:
 
@@ -109,4 +109,4 @@ openpyxl>=3.1
 
 ## Autor
 
-Desenvolvido como projeto de estudo em análise de dados com Python e SQL.
+Desenvolvido por Samuel Fiuza, como projeto de estudo em análise de dados com Python e SQL.
