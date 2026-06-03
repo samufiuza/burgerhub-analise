@@ -1,0 +1,4 @@
+burgerhub.db
+output/
+__pycache__/
+*.pyc
